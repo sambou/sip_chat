@@ -2,7 +2,7 @@ defmodule SipChatWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SipChatWeb.RoomChannel
+  channel "room:*", SipChatWeb.RoomChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
