@@ -8,7 +8,10 @@
 // from the params if you are not using authentication.
 import { Socket } from "phoenix";
 
-let socket = new Socket("/socket", { params: { token: window.userToken } });
+let name =
+  new URL(window.location.href).searchParams.get("name") || "Anonymous";
+
+let socket = new Socket("/socket", { params: { name } });
 
 // When you connect, you'll often need to authenticate the client.
 // For example, imagine you have an authentication plug, `MyAuth`,
