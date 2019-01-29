@@ -16,7 +16,7 @@ defmodule SipChatWeb.UserSocket do
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
   def connect(%{"name" => name}, socket, _connect_info) do
-    {:ok, assign(socket, :name, name)}
+    {:ok, socket |> assign(:name, name) |> assign(:user_id, name)}
   end
 
   # Socket id's are topics that allow you to identify all sockets for a given user:

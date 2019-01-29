@@ -11,9 +11,10 @@ defmodule SipChat.Application do
       # Start the Ecto repository
       SipChat.Repo,
       # Start the endpoint when the application starts
-      SipChatWeb.Endpoint
+      SipChatWeb.Endpoint,
       # Starts a worker by calling: SipChat.Worker.start_link(arg)
       # {SipChat.Worker, arg},
+      SipChatWeb.Presence
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
